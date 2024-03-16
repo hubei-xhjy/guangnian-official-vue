@@ -1,0 +1,59 @@
+@import './base.css';
+
+#app {
+    margin: 0 auto;
+    font-weight: normal;
+}
+
+a,
+.green {
+    text-decoration: none;
+    /*color: hsla(160, 100%, 37%, 1);*/
+    color: unset;
+    transition: 0.4s;
+    padding: 3px;
+}
+
+.warp {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.btn {
+    background-image: linear-gradient(to top, dodgerblue 50%, transparent 50%);
+    background-size: 100% 200%;
+    background-position: right top;
+    transition: background-position 0.3s ease-out,
+    color 0.2s ease-out;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: overlay-fadein 0.5s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes overlay-fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btn:hover {
+    background-position: right bottom;
+    color: white;
+}
+
+@media (hover: hover) {
+    a:hover {
+        background-color: hsla(160, 100%, 37%, 0.2);
+    }
+}
+
+@media (min-width: 1024px) {
+}
