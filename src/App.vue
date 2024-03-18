@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import {RouterLink, RouterView} from 'vue-router'
+
+function jumpToRecruitment() {
+  document.getElementById("recruitment")?.scrollIntoView({behavior: "smooth"});
+}
 </script>
 
 <template>
@@ -14,12 +18,15 @@ import {RouterLink, RouterView} from 'vue-router'
           <router-link to="/">
             <li class="menu-item">首页</li>
           </router-link>
-          <router-link to="/blog">
-            <li class="menu-item">博客</li>
-          </router-link>
-<!--          <router-link to="/about">-->
-<!--            <li class="menu-item">关于</li>-->
-<!--          </router-link>-->
+          <!--          <router-link to="/blog">-->
+          <!--            <li class="menu-item">博客</li>-->
+          <!--          </router-link>-->
+          <a href="#" @click="jumpToRecruitment">
+            <li>加入我们</li>
+          </a>
+          <!--          <router-link to="/about">-->
+          <!--            <li class="menu-item">关于</li>-->
+          <!--          </router-link>-->
         </ul>
       </div>
     </div>

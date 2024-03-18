@@ -110,7 +110,10 @@ function onFaqClose() {
                          :close-logic="onJobDetailsClose"/>
       </div>
       <div class="faq-section">
-        <div class="faq btn" @click="onFaqClick">常见问题 Frequently Asked Question</div>
+        <div class="faq btn" @click="onFaqClick">
+          常见问题 Frequently Asked Question
+          <div class="faq-comments">公司什么时候搬到武汉？办公地点在哪里？加入公司后能学到什么？薪资结构是怎样的？你想知道的一系列问题都在这里……</div>
+        </div>
         <FaqPopup v-if="isFaqOpened" :close-logic="onFaqClose"/>
       </div>
     </div>
@@ -148,6 +151,15 @@ function onFaqClose() {
   text-align: center;
   font-weight: bold;
   font-size: 2rem;
+}
+
+.faq-comments {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
 }
 
 @media screen and (max-width: 1100px) {
