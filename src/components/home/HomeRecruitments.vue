@@ -15,7 +15,7 @@ const jobs = ref([
   {
     name: "网站操作员",
     tags: ['测试', '区块链', '交互'],
-    description: "对区块链项目的去中心化应用 (dApps) 以及去中心化游戏 (GameFi) 进行交互",
+    description: "对区块链项目的去中心化应用 (dApps) 以及去中心化游戏 (DeGame) 进行交互",
     salary: 5000,
     imagePath: MaleGamerSticker,
     education: "专科",
