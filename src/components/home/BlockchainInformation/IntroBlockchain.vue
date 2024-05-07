@@ -4,7 +4,7 @@
 <template>
   <div>
     <div class="content">
-      <img class="NFTs" src="@/assets/blockchain-badge.png" alt="一枚刻着 Bitcoin 以及 Blockchain 字眼的 NFT">
+      <img class="NFTs" src="@/assets/blockchain-badge-min.png" alt="一枚刻着 Bitcoin 以及 Blockchain 字眼的 NFT">
       <p>
         区块链是一种去中心化的数据库技术，其特点在于数据的存储不依赖于单一中心服务器，而是分布在整个网络中的众多节点上。
         每个节点都持有一份数据的副本，任何数据的变更都需要网络中大多数节点的共识，这使得区块链具有极高的透明度和安全性。

@@ -30,7 +30,7 @@ defineProps<{
       <div class="job-desc">{{ description }}</div>
       <div class="job-edu">最低学历要求：{{ education != undefined ? education : '不限' }}</div>
       <div class="job-salary">月薪 {{ salary != undefined ? '￥' + salary + '+' : '面议' }}</div>
-      <div class="job-read-more-hint">点击卡片以查看更多详情</div>
+      <!-- <div class="job-read-more-hint">点击卡片以查看更多详情</div> -->
     </div>
   </div>
 </template>
@@ -91,7 +91,10 @@ defineProps<{
 .job-card img {
   max-width: 100%;
   min-height: 300px;
+  max-height: 300px;
   object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 .tag {

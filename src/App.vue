@@ -16,7 +16,7 @@ function jumpToRecruitment() {
       <div>
         <ul class="menu">
           <router-link to="/">
-            <li class="menu-item">首页</li>
+            <li class="menu-item">主页</li>
           </router-link>
           <!--          <router-link to="/blog">-->
           <!--            <li class="menu-item">博客</li>-->

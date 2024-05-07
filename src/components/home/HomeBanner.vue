@@ -16,7 +16,7 @@ function jumpToRecruitment() {
 .home-banner {
   text-align: center;
   padding: 114px 32px;
-  background-image: url("@/assets/banner.png");
+  background-image: url("@/assets/banner-min.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;

@@ -1,31 +1,32 @@
 <script setup lang="ts">
 
 import JobCard from "@/components/home/JobCard.vue";
-import FemaleGamerSticker from "@/assets/job-sticker-gamer-female.png"
-import MaleGamerSticker from "@/assets/job-sticker-gamer-male.png"
-import TraderSticker from "@/assets/job-sticker-trader.png"
-import TraderBoySticker from "@/assets/job-sticker-trader-boy.png"
-import DeveloperSticker from "@/assets/job-sticker-developer.png"
+import FemaleGamerSticker from "@/assets/job-sticker-gamer-female-min.png"
+import MaleGamerSticker from "@/assets/job-sticker-gamer-male-min.png"
+import TraderSticker from "@/assets/job-sticker-trader-min.png"
+import TraderBoySticker from "@/assets/job-sticker-trader-boy-min.png"
+import DeveloperSticker from "@/assets/job-sticker-developer-min.png"
 import JobDetailsPopup from "@/components/home/Popups/JobDetailsPopup.vue";
 
 import {ref} from "vue";
 import FaqPopup from "@/components/home/Popups/FaqPopup.vue";
 
 const jobs = ref([
+  // {
+  //   name: "网站操作员",
+  //   tags: ['测试', '区块链', '交互'],
+  //   description: "对区块链项目的去中心化应用 (dApps) 以及去中心化游戏 (GameFi) 进行交互",
+  //   salary: 5000,
+  //   imagePath: MaleGamerSticker,
+  //   education: "专科",
+  //   jobPage: "website-operator",
+  //   isPrimary: false
+  // },
   {
-    name: "网站操作员",
-    tags: ['测试', '区块链', '交互'],
-    description: "对区块链项目的去中心化应用 (dApps) 以及去中心化游戏 (GameFi) 进行交互",
-    salary: 5000,
-    imagePath: MaleGamerSticker,
-    education: "专科",
-    jobPage: "website-operator",
-    isPrimary: false
-  },
-  {
-    name: "交互测试助理",
+    name: "区块链实习生",
     tags: ['交互', '测试', '去中心化应用'],
-    description: "对区块链项目的稳定性进行测试",
+    // description: "对区块链项目的稳定性进行测试",
+    description: "对区块链项目的去中心化应用 (dApps) 以及去中心化游戏 (GameFi) 进行交互",
     salary: 5500,
     imagePath: FemaleGamerSticker,
     education: "本科",
@@ -82,6 +83,10 @@ function onFaqClick() {
 function onFaqClose() {
   isFaqOpened.value = false;
 }
+
+function onBossClick() {
+  window.location.href = "https://www.zhipin.com/gongsi/773b56c552faa86b1Xx92dy4GFo~.html";
+}
 </script>
 
 <template>
@@ -104,10 +109,18 @@ function onFaqClose() {
                  :job-page="job.jobPage"
                  :is-primary="job.isPrimary"
                  @click="onJobDetailsClick(job.jobPage)"/>
+        
+                 <!-- BOSS zhipin URL https://www.zhipin.com/gongsi/773b56c552faa86b1Xx92dy4GFo~.html -->
 
         <!-- 弹框 -->
         <JobDetailsPopup v-if="currentPopupJob != ''" :currentJob="currentPopupJob"
                          :close-logic="onJobDetailsClose"/>
+      </div>
+      <div class="boss-section">
+        <div class="boss btn" @click="onBossClick">
+          简历投递
+          <div class="boss-comments">心动不如行动！到 BOSS 直聘投递简历，一起探索区块链的未来！</div>
+        </div>
       </div>
       <div class="faq-section">
         <div class="faq btn" @click="onFaqClick">
@@ -143,7 +156,8 @@ function onFaqClose() {
   content: " -- ";
 }
 
-.faq {
+.faq,
+.boss {
   margin: 16px;
   padding: 8px;
   box-shadow: 2px 2px 4px 2px #ccc;
@@ -153,7 +167,12 @@ function onFaqClose() {
   font-size: 2rem;
 }
 
-.faq-comments {
+.boss.btn {
+  background-image: linear-gradient(to top, #00d7c6 50%, transparent 50%);
+}
+
+.faq-comments,
+.boss-comments {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

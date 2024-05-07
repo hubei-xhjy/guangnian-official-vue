@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# 拉取最新代码
+git pull
+
+# 构建项目
+npm run build
+
+# 进入 dist 目录
+cd dist
+
+# 确保 dist 目录是一个 Git 仓库
+# 如果不是，你需要先初始化它并添加远程仓库
+# git init
+# git remote add gitee2 <repository-url>
+# git remote add china <repository-url>
+
+# 添加所有更改
+git add .
+
+# 提交更改，使用当前时间作为提交信息
+now=$(date +"%Y-%m-%d %H:%M:%S")
+git commit -m "Update: $now"
+
+# 推送到远程仓库
+git push gitee2 main
+git push china main
+
+# 显示成功消息
+echo "Site updated successfully!"
+
